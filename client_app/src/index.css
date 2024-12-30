@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  /* font-family: 'Poppins', sans-serif; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Đảm bảo các phần tử trong row có chiều cao bằng nhau */
+.slider-with-banner .row {
+  display: flex;
+  align-items: stretch; /* Tất cả các phần tử trong row sẽ có chiều cao giống nhau */
+}
+
+.slider-with-banner .col-lg-8,
+.slider-with-banner .col-md-8 {
+  height: 100%; /* Chiều cao của phần tử bên trái bằng 100% chiều cao của row */
+}
+
+.slider-with-banner .col-lg-4,
+.slider-with-banner .col-md-4 {
+  display: flex;
+  flex-direction: column; /* Flexbox theo chiều dọc cho phần tử bên phải */
+  height: 100%;
+}
+
+.slider-with-banner .li-banner {
+  flex-grow: 1; /* Giãn chiều cao các phần tử ảnh */
+}
+
+.banner-image {
+  max-width: 100%; /* Đảm bảo ảnh không bị giãn ra */
+  height: auto;
+}
+
+.info-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}

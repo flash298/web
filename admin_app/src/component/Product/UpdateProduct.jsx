@@ -237,7 +237,7 @@ function UpdateProduct(props) {
                                                     className="form-control mr-2"
                                                     placeholder="Tên chi tiết"
                                                     value={detail.type}
-                                                    onChange={(e) => handleDetailChange(index, 'key', e.target.value)}
+                                                    onChange={(e) => handleDetailChange(index, 'type', e.target.value)}
                                                     required
                                                 />
                                                 <input

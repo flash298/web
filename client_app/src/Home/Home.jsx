@@ -70,7 +70,7 @@ function Home(props) {
   };
 
   return (
-    <div className="container">
+    <div className="container pt-40">
       <div className="slider-with-banner">
         <div className="row align-items-stretch" style={{ display: "flex", alignItems: "stretch" }}>
           <div className="col-lg-8 col-md-8" style={{ height: "533.1px" }}>
@@ -103,10 +103,10 @@ function Home(props) {
             <div className="li-banner mt-15 mt-sm-30 mt-xs-30" style={{ flexGrow: 1 }}>
               <a href="#">
                 <img
-                  src="https://themewagon.github.io/violet/img/f-box-2.jpg"
+                  src="https://file.hstatic.net/200000665395/article/mau-content-ban-quan-ao-nam-3_d050401820344f7a9869341a494a7ffa.jpg"
                   alt=""
                   className="banner-image"
-                  style={{ maxWidth: "100%", height: "auto" }}
+                  style={{ maxWidth: "100%", maxHeight: "259px", objectFit: "cover" }}
                 />
               </a>
             </div>
@@ -114,7 +114,6 @@ function Home(props) {
         </div>
       </div>
 
-      <Home_Category GET_id_modal={GET_id_modal} />
 
       {/* <div className="li-static-banner">
                 <div className="container">

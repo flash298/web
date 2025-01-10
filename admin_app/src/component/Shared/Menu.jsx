@@ -11,23 +11,23 @@ function Menu() {
     const [menu, setMenu] = useState([
         {
             item: "Customer",
-            permission: "Admin"
+            permission: "Nhân Viên"
         },
         {
             item: "Coupon",
-            permission: "Admin"
+            permission: "Nhân Viên"
         },
         {
             item: "Product",
-            permission: "Admin"
+            permission: "Nhân Viên"
         },
         {
             item: "Sale",
-            permission: "Admin"
+            permission: "Nhân Viên"
         },
         {
             item: "Category",
-            permission: "Admin"
+            permission: "Nhân Viên"
         },
         {
             item: "User",

@@ -102,7 +102,7 @@ function Product() {
                                                         <td>{new Intl.NumberFormat('vi-VN',{style: 'decimal',decimal: 'VND'}).format(value.price_product)+ ' VNĐ'}</td>
                                                         <td><img src={value.image || value.images?.[0]} alt="" style={{ width: '70px' }} /></td>
                                                         <td className="name" style={{ width: '40px' }}>
-                                                            {value.describe.length > 30 ? value.describe.slice(0, 30) + '...' : value.describe}
+                                                            {value.describe?.length > 30 ? value.describe?.slice(0, 30) + '...' : value.describe}
                                                         </td>
                                                         <td>{value.id_category ? value.id_category.category : ""}</td>
                                                         <td>

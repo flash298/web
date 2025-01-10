@@ -265,13 +265,13 @@ function Header(props) {
         <div className="container pb_header">
           <div className="row">
             <div className="col-lg-3">
-              <div className="logo pb-sm-30 pb-xs-30">
+              <div className="logo pb-sm-30 pb-xs-20" style={{ marginLeft: "60px"}}>
                 <Link to="/">
-                  <img src={logo} style={{ height: "5rem" }} />
+                  <img src={logo} style={{ height: "6rem" }} />
                 </Link>
               </div>
             </div>
-            <div className="col-lg-9 pl-0 ml-sm-15 ml-xs-15 d-flex justify-content-between">
+            <div className="col-lg-9 pl-0 ml-sm-15 ml-xs-15 d-flex justify-content-between" style={{ marginTop: "30px"}}>
               <form action="/search" className="hm-searchbox" onSubmit={handler_search}>
                 <input
                   type="text"
@@ -288,7 +288,7 @@ function Header(props) {
                       search_header.map((value) => (
                         <div className="hover_box_search d-flex" key={value._id}>
                           <Link to={`/detail/${value._id}`} style={{ padding: ".8rem" }}>
-                            <img className="img_list_search" src={value.image} alt="" />
+                            <img className="img_list_search" src={value.images?.[0] || value.image} alt="" />
                           </Link>
 
                           <div className="group_title_search" style={{ marginTop: "2.7rem" }}>

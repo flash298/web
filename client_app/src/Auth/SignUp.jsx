@@ -188,14 +188,14 @@ function SignUp(props) {
                                         </div>
                                         <div className="col-md-12 mb-20">
                                             <label>Họ tên *</label>
-                                            <input className="mb-0" type="text" placeholder="First Name" value={fullname} onChange={(e) => set_fullname(e.target.value)} />
+                                            <input className="mb-0" type="text" placeholder="Họ tên" value={fullname} onChange={(e) => set_fullname(e.target.value)} />
                                             {
                                                 errorFullname && <span style={{ color: 'red' }}>* Người là bắt buộc!</span>
                                             }  
                                         </div>
                                         <div className="col-md-12 mb-20">
                                             <label>Tài khoản *</label>
-                                            <input className="mb-0" type="text" placeholder="Username" value={username} onChange={(e) => set_username(e.target.value)} />
+                                            <input className="mb-0" type="text" placeholder="Tên đăng nhập" value={username} onChange={(e) => set_username(e.target.value)} />
                                             {
                                                 errorUsername && <span style={{ color: 'red' }}>* Tài khoản là bắt buộc!</span>
                                             }
@@ -205,14 +205,14 @@ function SignUp(props) {
                                         </div>
                                         <div className="col-md-6 mb-20">
                                             <label>Mật khẩu *</label>
-                                            <input className="mb-0" type="password" placeholder="Password" value={password} onChange={(e) => set_password(e.target.value)} />
+                                            <input className="mb-0" type="password" placeholder="Mật khẩu" value={password} onChange={(e) => set_password(e.target.value)} />
                                             {
                                                 errorPassword && <span style={{ color: 'red' }}>* Mật khẩu là bắt buộc!</span>
                                             }
                                         </div>
                                         <div className="col-md-6 mb-20">
                                             <label>Xác nhận mật khẩu *</label>
-                                            <input className="mb-0" type="password" placeholder="Confirm Password" value={confirm} onChange={(e) => set_confirm(e.target.value)} />
+                                            <input className="mb-0" type="passwod" placeholder="Xác nhận mật khẩu" value={confirm} onChange={(e) => set_confirm(e.target.value)} />
                                             {
                                                 errorConfirm && <span style={{ color: 'red' }}>* Xác nhận mật khẩu!</span>
                                             }

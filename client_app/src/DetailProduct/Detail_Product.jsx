@@ -239,7 +239,7 @@ function Detail_Product(props) {
                                     <div className="lg-image">
                                         <img src={mainImage} alt="product image" />
                                     </div>
-                                    <div className="product-thumbnails">
+                                    <div className="product-thumbnails" style={{ marginLeft: "20px"}}>
                                     {product.images?.map((image, index) => (
                                         <img
                                             key={index}
@@ -281,14 +281,14 @@ function Detail_Product(props) {
                                     </div>
                                     <div className="product-desc">
                                         <p>
-                                            <span>{product.describe}</span>
+                                            <span  style={{ whiteSpace: "pre-wrap" }}>{product.describe}</span>
                                         </p>
                                     </div>
-                                    <div className="product-desc">
+                                    {/* <div className="product-desc">
                                         <p>
-                                        Link shopee: <a href={product.link} target="_blank" rel="noopener noreferrer">{product.link.slice(0, 50)}...</a>
+                                        Link shopee: <a href={product.link} target="_blank" rel="noopener noreferrer">{product.link?.slice(0, 50)}...</a>
                                         </p>
-                                    </div>
+                                    </div> */}
                                     <div className="single-add-to-cart">
                                         <form action="#" className="cart-quantity">
                                             
@@ -302,7 +302,7 @@ function Detail_Product(props) {
                 </div>
             </div>
 
-            <div className="product-area pt-35">
+            <div className="product-area pt-35" style={{ marginLeft: "40px"}}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">

@@ -66,7 +66,7 @@ function Footer(props) {
             <div className="row d-flex align-items-center justify-content-between">
               <div className="col-lg-4 col-md-6 footer-logo-container">
                 <div className="footer-logo">
-                  <img src={logo} className="footer-logo-img" alt="Footer Logo" />
+                  <img src={logo} className="footer-logo-img" alt="Footer Logo" style={{ width: "10rem"}} />
                 </div>
               </div>
               <div className="col-lg-8 col-md-6">

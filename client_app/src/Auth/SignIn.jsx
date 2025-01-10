@@ -96,25 +96,17 @@ function SignIn(props) {
                                     <div className="row">
                                         <div className="col-md-12 col-12 mb-20">
                                             <label>Tài khoản *</label>
-                                            <input className="mb-0" type="text" placeholder="Username" value={username} onChange={(e) => set_username(e.target.value)} />
+                                            <input className="mb-0" type="text" placeholder="Email" value={username} onChange={(e) => set_username(e.target.value)} />
                                             {
                                                 error_username && <span style={{ color: 'red' }}>* Tài khoản không đúng!</span>
                                             }
                                         </div>
                                         <div className="col-12 mb-20">
-                                            <label>Mật khẩu</label>
-                                            <input className="mb-0" type="password" placeholder="Password" value={password} onChange={(e) => set_password(e.target.value)} />
+                                            <label>Mật khẩu *</label>
+                                            <input className="mb-0" type="password" placeholder="Mật khẩu" value={password} onChange={(e) => set_password(e.target.value)} />
                                             {
                                                 error_password && <span style={{ color: 'red' }}>* Sai mật khẩu!</span>
                                             }
-                                        </div>
-                                        <div className="col-md-8">
-                                            <div className="check-box d-inline-block ml-0 ml-md-2 mt-10">
-                                                <Link to="/signup">Không có tài khoản?</Link>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4 mt-10 mb-20 text-left text-md-right">
-                                            <a href="#"> Quên mật khẩu?</a>
                                         </div>
                                         <div className="col-md-12">
                                             {

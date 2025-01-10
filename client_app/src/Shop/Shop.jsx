@@ -168,7 +168,7 @@ function Shop(props) {
                     <div className="breadcrumb-content">
                         <ul>
                             <li><a href="index.html">Trang chủ</a></li>
-                            <li className="active">sản phẩm</li>
+                            <li className="active">Sản phẩm</li>
                         </ul>
                     </div>
                 </div>
@@ -180,11 +180,7 @@ function Shop(props) {
                     <div className="row">
                         <div className="col-lg-3 order-lg-1 order-2">
                             <div className="li-blog-sidebar-wrapper">
-                                <div className="li-blog-sidebar">
-                                    <div className="li-sidebar-search-form">
-                                        <Search handler_Search={handler_Search} />
-                                    </div>
-                                </div>
+                                
                                 <div className="li-blog-sidebar pt-25">
                                     <h4 className="li-blog-sidebar-title">Tất cả sản phẩm</h4>
 
@@ -216,18 +212,7 @@ function Shop(props) {
                             </div>
                         </div>
                         <div className="col-lg-9 order-1 order-lg-2">
-                            <div className="shop-top-bar">
-                                <div className="product-select-box">
-                                    <div className="product-short">
-                                        <p>Lọc:</p>
-                                        <select className="nice-select">
-                                            <option value="trending">Xu hướng</option>
-                                            <option value="rating">Giá (Thấp đến Cao)</option>
-                                            <option value="rating">Giá (Cao đến Thấp)</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
+                            
                             <div className="shop-products-wrapper">
                                 <div className="tab-content">
                                     <div id="grid-view" className="tab-pane active" role="tabpanel">

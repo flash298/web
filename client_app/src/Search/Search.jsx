@@ -83,7 +83,7 @@ function Search(props) {
                                                     <div className="col-lg-3 col-md-5 ">
                                                         <div className="product-image">
                                                             <Link to={`/detail/${value._id}`}>
-                                                                <img src={value.image} alt="Li's Product Image" />
+                                                                <img src={value.images?.[0] || value.image} alt="Li's Product Image" />
                                                             </Link>
                                                             <span className="sticker">New</span>
                                                         </div>
@@ -146,7 +146,7 @@ function Search(props) {
                                                 <div className="product-details-left">
                                                     <div className="product-details-images slider-navigation-1">
                                                         <div className="lg-image">
-                                                            <img src={value.image} alt="product image" />
+                                                            <img src={value.images?.[0] || value.image} alt="product image" />
                                                         </div>
                                                     </div>
                                                 </div>

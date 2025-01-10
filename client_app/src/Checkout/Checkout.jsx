@@ -547,7 +547,7 @@ function Checkout(props) {
                                                             {
                                                                 show_error ? 'Please Checking Information!' :
                                                                 <div>
-                                                                    <img src="https://developers.momo.vn/images/logo.png" width="50" onClick={handlerMomo}
+                                                                    <img src="https://developers.momo.vn/images/logo.png" width="550" onClick={handlerMomo}
                                                                     style={{ cursor: 'pointer' }} />
                                                                     <MoMo 
                                                                         orderID={orderID}

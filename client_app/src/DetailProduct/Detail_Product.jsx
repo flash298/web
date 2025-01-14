@@ -33,6 +33,8 @@ function Detail_Product(props) {
 
     const [sale, setSale] = useState()
 
+
+
     // Hàm này dùng để gọi API hiển thị sản phẩm
     useEffect(() => {
 
@@ -40,7 +42,7 @@ function Detail_Product(props) {
 
             const response = await Product.Get_Detail_Product(id)
 
-            set_product(response)
+            set_product(response);
             setMainImage(response.images?.[0] || response.image);
 
             const resDetail = await SaleAPI.checkSale(id)
@@ -48,10 +50,10 @@ function Detail_Product(props) {
             if (resDetail.msg === "Thanh Cong"){
                 setSale(resDetail.sale)
             }
-
         }
 
         fetchData()
+        console.log(product);
 
     }, [id])
 
@@ -269,7 +271,7 @@ function Detail_Product(props) {
                                     <div className="price-box pt-20">
                                         {
                                             sale ? (<del className="new-price new-price-2" style={{ color: '#525252'}}>{new Intl.NumberFormat('vi-VN',{style: 'decimal',decimal: 'VND'}).format(product.price_product)+ ' VNĐ'}</del>) :
-                                            <span className="new-price new-price-2">{new Intl.NumberFormat('vi-VN',{style: 'decimal',decimal: 'VND'}).format(product.price_product)+ ' VNĐ'}</span>
+                                            <span className="new-price new-price-2">Giá gốc: {new Intl.NumberFormat('vi-VN',{style: 'decimal',decimal: 'VND'}).format(product.price_product)+ ' VNĐ'}</span>
                                         }
                                         <br />
                                         {
@@ -278,7 +280,13 @@ function Detail_Product(props) {
                                                 .format(parseInt(sale.id_product.price_product) - ((parseInt(sale.id_product.price_product) * parseInt(sale.promotion)) / 100)) + ' VNĐ'}</span>
                                             )
                                         }
+                                        {
+                                        product?.sale_product && (
+                                            <span className="new-price new-price-2">Giá khuyến mãi: {new Intl.NumberFormat('vi-VN',{style: 'decimal',decimal: 'VND'}).format(product.sale_product)+ ' VNĐ'}</span>      
+                                        )
+                                    }
                                     </div>
+                                    
                                     <div className="product-desc">
                                         <p>
                                             <span  style={{ whiteSpace: "pre-wrap" }}>{product.describe}</span>

@@ -26,22 +26,21 @@ function Contact(props) {
                         <div className='col-md-12'>
                             <h3 className="contact-page-title">Liên hệ</h3>
                             <p className="contact-page-message mb-25">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sapiente ab cum accusantium, incidunt nihil fugit similique? Reiciendis ex dignissimos libero iusto quos, consequuntur nobis tenetur a minima! Voluptatum, ab?
+                                Hãy để đội ngũ tư vấn của Fashion hỗ trợ bạn dù ở bất kỳ nơi đâu
                             </p>
                         </div>
                         <div className="col-md-4">
                             <h4><i className="fa fa-fax"></i> Địa chỉ</h4>
-                            <p>Hust</p>
+                            <p>Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội</p>
                         </div>
                         <div className="col-md-4">
                             <h4><i className="fa fa-phone"></i> Điện thoại</h4>
-                            <p>Mobile: 012345678</p>
-                            <p>Hotline: className Biết</p>
+                            <p>Hotline: 0393144777</p>
                         </div>
                         <div className="col-md-4">
                             <h4><i className="fa fa-envelope-o"></i> Email</h4>
-                            <p>hust</p>
-                            <p>hust</p>
+                            <p>phuctm163201@sis.hust.edu.vn</p>
+                            
                         </div>
                     </div>
                 </div>

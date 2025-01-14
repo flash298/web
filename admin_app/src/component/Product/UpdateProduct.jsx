@@ -4,6 +4,7 @@ import categoryAPI from '../Api/categoryAPI';
 import isEmpty from 'validator/lib/isEmpty'
 import productAPI from '../Api/productAPI';
 
+
 function UpdateProduct(props) {
     const [id] = useState(props.match.params.id)
     const [category, setCategory] = useState([])
@@ -11,6 +12,7 @@ function UpdateProduct(props) {
     const [gender] = useState(["Unisex", "Male", "Female"])
     const [name, setName] = useState('');
     const [price, setPrice] = useState('');
+    const [salePrice, setSalePrice] = useState('');
     const [description, setDescription] = useState('');
     const [number, setNumber] = useState('');
     const [categoryChoose, setCategoryChoose] = useState('');
@@ -32,6 +34,7 @@ function UpdateProduct(props) {
             console.log(rs)
             setName(rs.name_product)
             setPrice(rs.price_product)
+            setSalePrice(rs.sale_product)
             setDescription(rs.describe)
             // setNumber(rs.number)
             setCategoryChoose(rs.id_category)
@@ -53,7 +56,7 @@ function UpdateProduct(props) {
         updatedDetails[index][field] = value;
         setDetails(updatedDetails);
     };
-    
+
     const handleRemoveDetail = (index) => {
         const updatedDetails = details.filter((_, i) => i !== index);
         setDetails(updatedDetails);
@@ -82,6 +85,13 @@ function UpdateProduct(props) {
         const value = e.target.value
         if (!Number.isNaN(value) && Number(value) > 0) {
             setPrice(value)
+        }
+    }
+
+    const onChangeSalePrice = (e) => {
+        const value = e.target.value
+        if (!Number.isNaN(value) && Number(value) > 0) {
+            setSalePrice(value)
         }
     }
 
@@ -121,6 +131,7 @@ function UpdateProduct(props) {
     }
 
     const addProduct = async () => {
+        console.log(salePrice);
         const formData = new FormData();
         formData.append("id", id);
         formData.append("fileName", fileName);
@@ -129,6 +140,9 @@ function UpdateProduct(props) {
         });
         formData.append("name", name)
         formData.append("price", price)
+
+        formData.append("sale", salePrice)
+
         formData.append("category", categoryChoose)
         // formData.append("number", number)
         formData.append("description", description)
@@ -188,12 +202,17 @@ function UpdateProduct(props) {
                                         <p className="form-text text-danger">{validationMsg.price}</p>
                                     </div>
                                     <div className="form-group w-50">
+                                        <label htmlFor="pric">Giá Sale</label>
+                                        <input type="text" className="form-control" id="sale" name="sale" value={salePrice} onChange={(e) => onChangeSalePrice(e)} required />
+                                        <p className="form-text text-danger">{validationMsg.salePrice}</p>
+                                    </div>
+                                    <div className="form-group w-50">
                                         <label htmlFor="description">Mô tả</label>
                                         <textarea
                                             className="form-control"
                                             id="description"
                                             name="description"
-                                            rows="5"value={description} onChange={(e) => setDescription(e.target.value)} required ></textarea>
+                                            rows="5" value={description} onChange={(e) => setDescription(e.target.value)} required ></textarea>
                                         <p className="form-text text-danger">{validationMsg.description}</p>
                                     </div>
                                     {/* <div className="form-group w-50">

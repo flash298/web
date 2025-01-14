@@ -10,6 +10,7 @@ function CreateProduct(props) {
     const [gender] = useState(["Unisex", "Male", "Female"])
     const [name, setName] = useState('');
     const [price, setPrice] = useState('');
+    const [sale, setSale] = useState('');
     const [description, setDescription] = useState('');
     const [number, setNumber] = useState('');
     const [categoryChoose, setCategoryChoose] = useState('');
@@ -54,6 +55,15 @@ function CreateProduct(props) {
             setPrice(value)
         }
     }
+
+    const onChangeSale = (e) => {
+        const value = e.target.value
+        if (!Number.isNaN(value) && Number(value) > 0) {
+            setSale(value)
+        }
+    }
+
+    
 
 
     const validateAll = () => {
@@ -121,6 +131,7 @@ function CreateProduct(props) {
         formData.append("link", link);
         formData.append("name", name);
         formData.append("price", price);
+        formData.append("sale", sale);
         formData.append("category", categoryChoose);
         formData.append("description", description);
         formData.append("gender", genderChoose);
@@ -131,6 +142,7 @@ function CreateProduct(props) {
         if (response.msg === "Bạn đã thêm thành công") {
             setName('');
             setPrice('');
+            setSale('');
             setDescription('');
             setCategoryChoose('');
             setGenderChoose('Unisex');
@@ -182,6 +194,11 @@ function CreateProduct(props) {
                                         <label htmlFor="price">Giá Sản Phẩm</label>
                                         <input type="text" className="form-control" id="price" name="price" value={price} onChange={(e) => onChangePrice(e)} required />
                                         <p className="form-text text-danger">{validationMsg.price}</p>
+                                    </div>
+                                    <div className="form-group w-50">
+                                        <label htmlFor="price">Giá Sale</label>
+                                        <input type="text" className="form-control" id="price" name="price" value={price} onChange={(e) => onChangeSale(e)} required />
+                                        <p className="form-text text-danger">{validationMsg.sale}</p>
                                     </div>
                                     <div className="form-group w-50">
                                         <label htmlFor="description">Mô tả</label>

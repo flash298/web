@@ -63,7 +63,10 @@ function Home_Product(props) {
                                                     <div className="price-box">
                                                         <span className="new-price">
                                                             {new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(value.price_product)}
-                                                        </span>
+                                                        </span> 
+                                                        <span style={{ color: 'red' }}>
+                                                            {new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(value.sale_product)}
+                                                        </span> 
                                                     </div>
                                                 </div>
                                             </div>

@@ -51,6 +51,7 @@ module.exports.create = async (req, res) => {
             req.body.name = req.body.name.toLowerCase().replace(/^.|\s\S/g, a => { return a.toUpperCase(); });
             newProduct.name_product = req.body.name;
             newProduct.price_product = req.body.price;
+            newProduct.sale_product = req.body.sale;
             newProduct.id_category = req.body.category;
             newProduct.describe = req.body.description;
             newProduct.gender = req.body.gender;
@@ -135,7 +136,8 @@ module.exports.details = async (req, res) => {
 
 module.exports.update = async (req, res) => {
     try {
-        const { id, name, price, category, description, gender, link, details } = req.body;
+        const { id, name, price, sale, category, description, gender, link, details } = req.body;
+        console.log(req.body);
         const product = await Product.findById(id);
 
         if (!product) {
@@ -168,6 +170,7 @@ module.exports.update = async (req, res) => {
         // Update product fields
         product.name_product = formattedName;
         product.price_product = price;
+        product.sale_product = sale;
         product.id_category = category;
         product.describe = description;
         product.gender = gender;

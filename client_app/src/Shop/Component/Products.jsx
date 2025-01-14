@@ -48,7 +48,9 @@ function Products(props) {
                                     </div>
                                     <h4><a className="product_name" href="single-product.html"></a></h4>
                                     <div className="price-box">
-                                        <span className="new-price">{new Intl.NumberFormat('vi-VN',{style: 'decimal',decimal: 'VND'}).format(value.price_product)+ ' VNĐ'}</span>
+                                        <span className="new-price">Giá gốc: {new Intl.NumberFormat('vi-VN',{style: 'decimal',decimal: 'VND'}).format(value.price_product)+ ' VNĐ'}</span>
+                                        <span className="new-price">Giá khuyến mãi: {new Intl.NumberFormat('vi-VN',{style: 'decimal',decimal: 'VND'}).format(value.sale_product)+ ' VNĐ'}</span>
+
                                     </div>
                                 </div>
                             </div>

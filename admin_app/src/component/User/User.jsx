@@ -8,6 +8,7 @@ import Search from '../Shared/Search'
 
 function User(props) {
     const [filter, setFilter] = useState({
+        // permission: '6087dca4f269113b3460fce3',
         page: '1',
         limit: '4',
         search: '',
@@ -91,7 +92,7 @@ function User(props) {
                                                         <td>{value._id}</td>
                                                         <td>{value.fullname}</td>
                                                         <td>{value.email}</td>
-                                                        <td>{value.id_permission.permission}</td>
+                                                        <td>{value.id_permission?.permission}</td>
                                                         <td>
                                                             <div className="d-flex">
                                                                 <Link to={"user/update/" + value._id} className="btn btn-success mr-1">Update</Link>

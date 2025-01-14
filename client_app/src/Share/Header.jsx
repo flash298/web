@@ -204,7 +204,7 @@ function Header(props) {
             <div className="col-lg-3 col-md-4">
               <li>
                 <span>Điện thoại:</span>
-                <a href="#">(+123) 123 321 345</a>
+                <a href="#">(+84) 393144777</a>
               </li>
             </div>
             <div className="col-lg-9 col-md-8">
@@ -399,6 +399,7 @@ function Header(props) {
                       <li>
                         <Link to="/contact">Liên hệ</Link>
                       </li>
+                    
                     </ul>
                   </nav>
                 </div>

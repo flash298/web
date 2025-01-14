@@ -16,7 +16,9 @@ module.exports.index = async (req, res) => {
     if (req.query.permission) {
         users = await User.find({ id_permission: req.query.permission }).populate('id_permission')
     } else {
-        users = await User.find({}).populate('id_permission')
+
+        users = await User.find().populate('id_permission')
+        console.log(users)
     }
 
 
@@ -60,7 +62,8 @@ module.exports.create = async (req, res) => {
         newUser.fullname = req.query.name
         newUser.username = req.query.username
         newUser.password = req.query.password
-        if (req.query.permission) {
+       
+        if (!req.query.permission) {
             newUser.id_permission = "6087dcb5f269113b3460fce4"
         } else newUser.id_permission = req.query.permission
         newUser.email = req.query.email

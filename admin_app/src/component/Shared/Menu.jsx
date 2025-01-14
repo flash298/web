@@ -21,10 +21,7 @@ function Menu() {
             item: "Product",
             permission: "Nhân Viên"
         },
-        {
-            item: "Sale",
-            permission: "Nhân Viên"
-        },
+        
         {
             item: "Category",
             permission: "Nhân Viên"

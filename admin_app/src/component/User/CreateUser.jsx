@@ -146,7 +146,7 @@ function CreateUser(props) {
                                             <option>Chọn quyền</option>
                                             {
                                                 permission && permission.map((item, index) => (
-                                                    <option value={item._id} key={index} >{item.permission}</option>
+                                                    <option value={item._id} key={item._id} >{item.permission}</option>
                                                 ))
                                             }
                                         </select>
